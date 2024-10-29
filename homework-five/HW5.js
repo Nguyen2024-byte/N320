@@ -3,6 +3,15 @@ const storyRef = document.getElementById("story");
 // Variable to track the story's progress.
 const storyProgress = [];
 
+// Add a function to add segments of story choices.
+function addStory() {
+  const nameValue = storyRef.value;
+
+  storyProgress.push({});
+
+  showstory();
+}
+
 // TO list the choices made by the users and the story's progress.
 function showStory() {
   storyRef.innerHTML = "";
@@ -98,7 +107,23 @@ function beginStory() {
 
         if (knockOnWindow) {
           document.getElementBId("story").innerHTML +=
-            "You carefully peek through the curtains to see a pair of red eyes staring into your souls. You try to shut the curtains tight, but too late! The ghost enters your room and...it's THE END.";
+            "You carefully peek through the curtains to see a pair of red eyes staring into your souls. You try to shut the curtains tight, but too late! The ghost enters your room and...";
+
+          const ghostBuster = prompt(`It's a ghost!
+                \n What do you do?
+                \n (Enter the number of your choice)
+                \n 1. Give it a hug?
+                \n 2. Suck it up with a vacumm cleaner!`);
+          if (ghostBuster === "1") {
+            document.getElementById("story").innerHTML +=
+              "You think the ghost is friendly, so you decide to give it a hug. Big mistake. It possess you. THE END.";
+          } else if (ghostBuster === "2") {
+            document.getElementById("story").innerHTML +=
+              "I'm a Luigi! Number one! It's just a floating sheet with eyeballs. You take the vaccumn cleaner and suck the ghost up. THE END.";
+          } else {
+            document.getElementById("story").innerHTML +=
+              "Invalid response. You must type either 1 or 2. Which one to defeat the ghost?";
+          }
         } else {
           document.getElementBId("story").innerHTML +=
             "You'd rather not want to look outside and see what's tapping on the window. You decide to hide under the bed and pray for THE END.";
@@ -152,7 +177,7 @@ function beginStory() {
     // Choose not to start the story.
   } else {
     document.getElementBId("story").innerHTML +=
-      "Then you'll never know how the story goes.";
+      "Then you'll never know how the story goes. THE END.";
     // next if statement
   }
 }
