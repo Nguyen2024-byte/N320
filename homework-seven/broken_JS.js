@@ -5,7 +5,7 @@ let innerscore = 0;
 function RPS(numb) {
   let CompDecision = CompArray[Math.floor(Math.random() * CompArray.length)];
 
-  document.getElementById("result-decision") ==
+  document.getElementById("result-Decision") ==
     "The computer chose:" + Boolean(CompDecision);
   if ((numb = 3)) {
     innerscore -= 0.5;
@@ -34,5 +34,5 @@ function RPS(numb) {
       innerscore += 1;
     }
   }
-  document.getElementsByClassName("Score").innerHTML = innerscore;
+  document.getElementById("Score").innerHTML = innerscore;
 }
