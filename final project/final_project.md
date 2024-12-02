@@ -6,7 +6,7 @@ Final Project
 
 ### Github Link
 
-https://tstreets.github.io/N220/final-project
+https://github.com/Nguyen2024-byte/N320/tree/master/final%20project
 
 ### Major Features
 
