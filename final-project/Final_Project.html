@@ -1,96 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Final Project</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      html,
-      body {
-        height: 100%;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      p {
-        margin-bottom: 16px;
-      }
-
-      body > h1 {
-        background-color: #f08080;
-        padding: 16px;
-      }
-
-      body {
-        background-color: #90ee9075;
-      }
-
-      body > section {
-        padding: 0 12px;
-      }
-
-      .task {
-        border: 2px solid black;
-        border-radius: 5px;
-        width: 300px;
-        padding: 8px;
-        margin: 4px 0;
-      }
-
-      button {
-        padding: 4px;
-        background-color: #4f414f;
-        color: white;
-      }
-
-      button.red {
-        background-color: #811d1d;
-      }
-
-      button.blue {
-        background-color: #8f91d6;
-      }
-
-      .done h4 {
-        text-decoration: line-through;
-      }
-    </style>
-  </head>
   <body>
-    <h1>Personal Task Manager</h1>
-    <form login.default>
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Final Project</title>
+      <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        html,
+        body {
+          height: 100%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+          margin-bottom: 16px;
+        }
+
+        h1 {
+          background-color: #f08080;
+          padding: 16px;
+        }
+
+        body {
+          background-color: #90ee9075;
+        }
+
+        body > section {
+          padding: 0 12px;
+        }
+
+        .task {
+          border: 2px solid black;
+          border-radius: 5px;
+          width: 300px;
+          padding: 8px;
+          margin: 4px 0;
+        }
+
+        button {
+          padding: 4px;
+          background-color: #4f414f;
+          color: white;
+        }
+
+        button.red {
+          background-color: #811d1d;
+        }
+
+        button.blue {
+          background-color: #8f91d6;
+        }
+
+        .done h4 {
+          text-decoration: line-through;
+        }
+      </style>
+    </head>
+    <div>
+      <h1>Personal Task Manager</h1>
+
+      <div class="website">
+        <header>
+          <button>LOGOUT</button>
+          <div id="userName">
+            <!--JS write "Welcome + username" here-->
+          </div>
+        </header>
+        <button class="add-btn" onclick="addItem()">Add Task</button>
+      </div>
+
+      <script>
+        $(".website").hide();
+      </script>
+    </div>
+    <!--JS write To-Do List here-->
+    <!--<div class = "dashboard">
+        <div class ="task-input">
+        <input type="text" value="Add Task">
+        <button class="add-btn" onclick="addItem()">Add Task</button>
+      </div>
+    
+          <input
+            type="button"
+            value="Remove"
+            onclick="removeItem()"
+            name="removeItem"
+          />
+    
+          <input
+            type="button"
+            value="Change Text"
+            onclick="changeText()"
+            name="changeText"
+          />
+    
+          <input
+            type="dropDown"
+            value="Choose Category"
+            onclick="removeItem()"
+            name="chooseCategory"
+          />
+        </div>-->
+
+    <form class="login">
       <label>Username:</label>
       <input type="text" name="userName" id="userName" />
       <br />
       <label for="Password">Password:</label>
       <input type="password" name="password" id="password" />
     </form>
-
-    <form Dashboard>
-      <div id="dashboard">
-        <p>Welcome, <span id="userName"></span></p>
-        <button id="logout">Logout</button>
-      </div>
-
-      <input
-        type="button"
-        value="Add Task"
-        onclick="addItem()"
-        name="addItem"
-      />
-    </form>
-
     <script src="final_project.js"></script>
   </body>
 </html>
