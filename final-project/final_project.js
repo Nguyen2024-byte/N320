@@ -57,26 +57,63 @@ newBtn.onclick = validatePassword;
 document.body.appendChild(newBtn);
 
 //Dashboard
-//  Show who is logged in
+function login(form) {
+  if (form((validatePassword = true))) {
+    $(".login").fadeOut(1000);
+    $(".website").fadeIn(1000);
+
+    var user = document.getElementById("userName").value;
+    //  Show who is logged in
+    document.getElementById("userName").innerHTML = "Welcome " + userName;
+  } else {
+    alert("Invalid Login");
+  }
+}
 //  Give a button for logging out
-//  Show all tasks and signify which are marked as complete
-
-// Logout functionality
-logoutButton.addEventListener("click", () => {
-  // Perform logout actions here, such as:
-  // - Clear user session data
-  // - Redirect to login page
-  // - Send a logout request to the server
-
-  // Example:
-  localStorage.removeItem("userToken"); // Clear user token
-  window.location.href = "/login"; // Redirect to login
+$(".logOut").click(function () {
+  $(".login").fadeIn(1000);
+  $(".website").fadeOut(1000);
 });
+
+//  Show all tasks and signify which are marked as complete
 
 //Tasks
 //  Allow users to add new tasks to the list
+function addTask() {
+  const taskInput = document.getElementById("taskInput");
+  const taskText = taskInput.value.trim();
+
+  if (taskText !== "") {
+    const taskList = document.getElementById("taskList");
+
+    // Create a new list item element
+    const newTask = document.createElement("li");
+
+    // Apply styles to the new task
+    newTask.classList.add("task"); // Add a class for basic styling
+
+    // Create a span for the task text
+    const taskSpan = document.createElement("span");
+    taskSpan.textContent = taskText;
+
+    // Add the task text and buttons to the list item
+    newTask.appendChild(taskSpan);
+    newTask.appendChild(createEditButton());
+    newTask.appendChild(createDeleteButton());
+
+    // Add the new task to the task list
+    taskList.appendChild(newTask);
+
+    // Clear the input field
+    taskInput.value = "";
+  }
+}
 //  Allow users to mark a task as complete
+
 //  Allow users to remove a task from the list
+function removeTask() {
+  const button = document.querySelector(".button.red");
+}
 //  Allow users to change the text of the task
 //  Allow users to assign an additional property of the task
 
