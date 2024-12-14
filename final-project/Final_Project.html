@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final Project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Personal Task Manager</h1>
+    <form login.default>
+      <label>Username:</label>
+      <input type="text" name="userName" id="userName" />
+      <br />
+      <label for="Password">Password:</label>
+      <input type="password" name="password" id="password" />
+    </form>
+
+    <form Dashboard>
+      <div id="dashboard">
+        <p>Welcome, <span id="userName"></span></p>
+        <button id="logout">Logout</button>
+      </div>
+
+      <input
+        type="button"
+        value="Add Task"
+        onclick="addItem()"
+        name="addItem"
+      />
+    </form>
+
+    <script src="final_project.js"></script>
+  </body>
+</html>
